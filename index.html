@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Studienteilnahme Heilstollentherapie</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Studie zur Wirksamkeit der Heilstollentherapie</h1>
+<p>Schlafstörungen · Stressbelastung · Asthma bronchiale</p>
+</header>
+
+<div class="container">
+
+<p>
+Bitte füllen Sie den folgenden Aufnahmefragebogen aus.
+Die Angaben werden ausschließlich zur Prüfung der Studienteilnahme verwendet.
+</p>
+
+<form id="studyForm"
+action="https://formspree.io/f/YOUR_FORM_ID"
+method="POST">
+
+<input type="hidden" name="PatientID" id="patientID">
+
+<h2>Persönliche Angaben</h2>
+
+<label>Name</label>
+<input type="text" name="Name" required>
+
+<label>Geburtsjahr</label>
+<input type="number" name="Geburtsjahr">
+
+<label>Email</label>
+<input type="email" name="Email">
+
+<label>Telefon</label>
+<input type="text" name="Telefon">
+
+<h2>Teilnahmegrund</h2>
+
+<label><input type="radio" name="Diagnose" value="Schlafstörungen"> Schlafstörungen</label>
+<label><input type="radio" name="Diagnose" value="Stressbelastung"> Stressbelastung</label>
+<label><input type="radio" name="Diagnose" value="Asthma bronchiale"> Asthma bronchiale</label>
+
+<h2>Ausschlusskriterien</h2>
+
+<label>Haben Sie in den letzten 3 Monaten geraucht?</label>
+
+<select name="Rauchen" id="smoking">
+<option value="Nein">Nein</option>
+<option value="Ja">Ja</option>
+</select>
+
+<label>Akute Atemwegsinfektion (unter 4 Wochen)?</label>
+
+<select name="Infektion" id="infection">
+<option value="Nein">Nein</option>
+<option value="Ja">Ja</option>
+</select>
+
+<div id="exclusionWarning" class="warning"></div>
+
+<h2>Medikamente</h2>
+
+<textarea name="Medikamente"></textarea>
+
+<h2>Einwilligung</h2>
+
+<label>
+<input type="checkbox" required>
+Ich willige ein, dass meine Angaben für die Studie gespeichert
+und ausgewertet werden.
+</label>
+
+<button type="submit">Fragebogen absenden</button>
+
+</form>
+
+</div>
+
+<footer>
+Studienleitung: Dr. Schwarz
+</footer>
+
+</body>
+</html>
