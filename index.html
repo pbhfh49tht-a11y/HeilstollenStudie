@@ -32,20 +32,32 @@ method="POST">
 <label>Name</label>
 <input type="text" name="Name" required>
 
-<label>Geburtsjahr</label>
-<input type="number" name="Geburtsjahr">
+<label>Adresse</label>
+<textarea name="Adresse" required></textarea>
 
 <label>Email</label>
-<input type="email" name="Email">
+<input type="email" name="Email" required>
 
 <label>Telefon</label>
 <input type="text" name="Telefon">
 
-<h2>Teilnahmegrund</h2>
+<h2>Krankheitsbilder (Mehrfachauswahl möglich)</h2>
 
-<label><input type="radio" name="Diagnose" value="Schlafstörungen"> Schlafstörungen</label>
-<label><input type="radio" name="Diagnose" value="Stressbelastung"> Stressbelastung</label>
-<label><input type="radio" name="Diagnose" value="Asthma bronchiale"> Asthma bronchiale</label>
+<label>
+<input type="checkbox" name="Diagnose[]" value="Schlafstörungen">
+Schlafstörungen
+</label>
+
+<label>
+<input type="checkbox" name="Diagnose[]" value="Stressbelastung">
+Stressbelastung
+</label>
+
+<label>
+<input type="checkbox" name="Diagnose[]" value="Asthma bronchiale">
+Asthma bronchiale
+</label>
+
 
 <h2>Ausschlusskriterien</h2>
 
